@@ -19,7 +19,7 @@ export class SudokuValidator {
     }
 
     public static checkLines(field: Field, y: number): SudokuValidatorResultError[] {
-        let errors: SudokuValidatorResultError[] = [];
+        const errors: SudokuValidatorResultError[] = [];
         let column: SudokuFieldValue[] = [];
         let row: SudokuFieldValue[] = [];
         for (let i = 0; i < 9; i++) {
@@ -30,13 +30,13 @@ export class SudokuValidator {
                     errors.push({
                         column: j,
                         row: i,
-                    })
+                    });
                 }
                 if (row.includes(field[j][i])) {
                     errors.push({
                         column: i,
                         row: j,
-                    })
+                    });
                 }
                 row.push(field[j][i]);
                 column.push(field[i][j]);
@@ -46,7 +46,7 @@ export class SudokuValidator {
     }
 }
 
-let a: Field = [[1, 2, 3, 4, 5, 6, 7, 8, 9],
+const a: Field = [[1, 2, 3, 4, 5, 6, 7, 8, 9],
 [1, 2, 3, 4, 5, 6, 7, 8, 9],
 [1, 2, 3, 4, 5, 6, 7, 8, 9],
 [1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -54,4 +54,4 @@ let a: Field = [[1, 2, 3, 4, 5, 6, 7, 8, 9],
 [1, 2, 3, 4, 5, 6, 7, 8, 9],
 [1, 2, 3, 4, 5, 6, 7, 8, 9],
 [1, 2, 3, 4, 5, 6, 7, 8, 9],
-[1, 2, 3, 4, 5, 6, 7, 8, 9]]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]];
