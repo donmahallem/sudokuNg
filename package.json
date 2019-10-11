@@ -72,8 +72,8 @@
     "karma-jasmine": "~2.0.0",
     "karma-jasmine-html-reporter": "~1.4.0",
     "protractor": "~5.4.0",
-    "pug": "^2.0.4",
-    "pug-loader": "^2.4.0",
+    "pug": "~2.0.4",
+    "pug-loader": "~2.4.0",
     "ts-node": "~8.4.1",
     "tslint": "~5.20.0",
     "typescript": "<3.6.0"
