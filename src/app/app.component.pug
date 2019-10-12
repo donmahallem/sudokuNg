@@ -1,7 +1,4 @@
-h2 Here are some links to help you start: 
-table.sudoku-field
-  - for (var x = 0; x < 9; x++)
-    tr
-      - for (var y = 0; y < 9; y++)
-        td 
-          input(value="#{ x } #{ y }",id="cell_"+x+""+y,type="number",min="1",max="9")
+mat-toolbar(color="primary")
+  span My Application
+div.content
+  router-outlet
