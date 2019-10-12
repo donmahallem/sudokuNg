@@ -1,0 +1,22 @@
+$field_size: 80;
+
+table.sudoku-field{
+    width:unquote('min('+$field_size+'vh,'+$field_size+'vw)');
+    height:unquote('min('+$field_size+'vh,'+$field_size+'vw)');
+    margin:0px auto;
+    tr{
+        margin:0px;
+        padding:0px;
+        td{
+            margin:0px;
+            padding:0px;
+            input{
+                margin:0px;
+                padding:0px;
+                height:50px;
+                width: 50px;
+                outline:none;
+            }
+        }
+    }
+}
