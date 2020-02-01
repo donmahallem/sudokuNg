@@ -17,6 +17,7 @@
     "compodoc": "npx compodoc -p src/tsconfig.app.json -d ./docs",
     "postinstall": "node ./ng-add-pug-loader.js",
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
+    "build:githubpages": "ng build --aot --prod --base-href=/sudokuNg/ --deploy-url=/sudokuNg/",
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run sudokuNg:server:production --bundleDependencies all"
