@@ -32,7 +32,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
-  publish_suite1:
+  publish_suite2:
     runs-on: ubuntu-latest
     name: Publish Master
     needs: test_suite
