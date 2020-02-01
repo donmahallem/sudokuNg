@@ -45,6 +45,7 @@ jobs:
         run: |
           npm run build:githubpages
           cp ./dist/browser/index.html ./dist/browser/404.html
+          ./build_ssr.sh
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
