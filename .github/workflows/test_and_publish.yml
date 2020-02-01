@@ -22,6 +22,26 @@ jobs:
         run: npm run lint
       - name: Run Docs
         run: npm run compodoc
+  publish_suite1:
+    runs-on: ubuntu-latest
+    name: Publish Dev
+    needs: test_suite
+    if: github.ref == 'dev'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+  publish_suite1:
+    runs-on: ubuntu-latest
+    name: Publish Master
+    needs: test_suite
+    if: github.ref == 'master'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
   publish_suite:
     runs-on: ubuntu-latest
     name: Publish
