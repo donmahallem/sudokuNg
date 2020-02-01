@@ -21,4 +21,4 @@ jobs:
       - name: Run Lint
         run: npm run lint
       - name: Run Docs
-        run: npm run docs
+        run: npm run compodoc
