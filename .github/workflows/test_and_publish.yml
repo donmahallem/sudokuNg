@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Publish Dev
     needs: test_suite
-    if: github.ref == 'dev'
+    if: github.ref == 'refs/heads/dev'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Publish Master
     needs: test_suite
-    if: github.ref == 'master'
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Publish
     needs: test_suite
-    if: (github.ref == 'dev' || github.ref == 'master') && github.event_name == 'push'
+    if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev') && github.event_name == 'push'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
