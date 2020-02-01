@@ -41,6 +41,10 @@ jobs:
       - name: Run Build
         run: |
           npm run build
+      - name: Prepare deployment
+        run: |
+          ng build --aot --prod --base-href=/sudokuNg/ --deploy-url=/sudokuNg/
+          cp ./dist/browser/index.html ./dist/browser/404.html
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
