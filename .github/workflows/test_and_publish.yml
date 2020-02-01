@@ -39,7 +39,10 @@ jobs:
       - name: Install Deps
         run: npm install --no-save
       - name: Run Build
-        run: npm run build
+        run: |
+          npm run build
+          echo "::warning file=src/app/app.component.ts,line=2,col=5::Something went wrong"
+          echo "::warning file=src/app/app.component.ts,line=1-5::Something went wrong22"
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
