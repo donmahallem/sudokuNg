@@ -22,3 +22,14 @@ jobs:
         run: npm run lint
       - name: Run Docs
         run: npm run compodoc
+  publish_suite:
+    runs-on: ubuntu-latest
+    name: Test
+    if: github.event_name == "push"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
