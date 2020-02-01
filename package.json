@@ -16,7 +16,6 @@
     "test:docs": "npm run compodoc",
     "compodoc": "npx compodoc -p src/tsconfig.app.json -d ./docs",
     "postinstall": "node ./ng-add-pug-loader.js",
-    "jj": "ng add @nguniversal/express-engine --clientProject sudokuNg",
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
@@ -54,10 +53,10 @@
     "@angular/platform-browser-dynamic": "~8.2.10",
     "@angular/platform-server": "~8.2.10",
     "@angular/router": "~8.2.10",
-    "@nguniversal/express-engine": "^8.2.6",
-    "@nguniversal/module-map-ngfactory-loader": "v8.2.6",
+    "@nguniversal/express-engine": "~8.2.6",
+    "@nguniversal/module-map-ngfactory-loader": "~8.2.6",
     "core-js": "~3.2.1",
-    "express": "^4.15.2",
+    "express": "~4.15.2",
     "ng-cli-pug-loader": "~0.2.0",
     "rxjs": "~6.5.3",
     "tslib": "~1.10.0",
@@ -73,7 +72,7 @@
     "@types/jasmine": "~3.4.4",
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "~12.7.12",
-    "apply-loader": "^2.0.0",
+    "apply-loader": "~2.0.0",
     "codelyzer": "~5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -85,10 +84,10 @@
     "protractor": "~5.4.0",
     "pug": "~2.0.4",
     "pug-loader": "~2.4.0",
-    "ts-loader": "^5.2.0",
+    "ts-loader": "~5.2.0",
     "ts-node": "~8.4.1",
     "tslint": "~5.20.0",
     "typescript": "<3.6.0",
-    "webpack-cli": "^3.1.0"
+    "webpack-cli": "~3.1.0"
   }
 }
