@@ -1,6 +1,6 @@
 #!/bin/bash
 npm install -g pm2
-npm run build:ssr
+npm run build:ssr:github
 pm2 start ./.github/workflows/pm2.config.js
 sleep 5
 pm2 ls
