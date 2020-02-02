@@ -11,6 +11,10 @@ const appRoutes: Routes = [
     {
         loadChildren: () => import('./modules/play/play.module').then((m) => m.PlayModule),
         path: 'play',
+    },
+    {
+        loadChildren: () => import('./modules/solve/solve.module').then((m) => m.SolveModule),
+        path: 'solve',
     }, {
         component: NotFoundComponent,
         path: '**',
