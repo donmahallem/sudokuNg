@@ -5,6 +5,7 @@ import {
 } from '@angular/material';
 import { SolveComponent } from './component';
 import { SolveRoutingModule } from './solve-routing.module';
+import { SudokuFieldModule } from '../sudoku-field';
 @NgModule({
     declarations: [
         SolveComponent
@@ -12,6 +13,7 @@ import { SolveRoutingModule } from './solve-routing.module';
     imports: [
         CommonModule,
         MatButtonModule,
+        SudokuFieldModule,
         SolveRoutingModule
     ],
 })

@@ -12,7 +12,9 @@ import { RouterModule } from '@angular/router';
     imports: [
         CommonModule,
         RouterModule,
-        MatButtonModule
-    ],
+        MatButtonModule,
+    ], exports: [
+        SudokuFieldComponent
+    ]
 })
 export class SudokuFieldModule { }
