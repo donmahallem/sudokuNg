@@ -5,6 +5,7 @@ pm2 start ./.github/workflows/pm2.config.js
 sleep 5
 pm2 ls
 sleep 5
-curl localhost:4000 > ./dist/browser/405.html
+curl localhost:4000 > ./dist/browser/index.html
+curl localhost:4000 > ./dist/browser/solve.html
 pm2 stop all
 pm2 delete all
