@@ -15,4 +15,4 @@ import { RouterModule } from '@angular/router';
         MatButtonModule
     ],
 })
-export class PlayModule { }
+export class NotFoundModule { }
