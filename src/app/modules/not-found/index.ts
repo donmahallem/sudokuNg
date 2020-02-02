@@ -1,2 +1,2 @@
-export { NotFoundModule } from "./not-found.module";
-export { NotFoundComponent } from "./component";
+export { NotFoundModule } from './not-found.module';
+export { NotFoundComponent } from './component';
