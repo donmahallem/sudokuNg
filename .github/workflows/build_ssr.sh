@@ -1,7 +1,7 @@
 #!/bin/bash
 npm install -g pm2
 npm run build:ssr
-pm2 start ./dist/server/main.js --watch
+pm2 start ./.github/workflows/pm2.config.js
 sleep 5
 pm2 ls
 sleep 5
