@@ -1,3 +1,4 @@
-- for (var x = 0; x < 9; x++)
-  - for (var y = 0; y < 9; y++)
-    button(mat-button,(click)="setValue("+ x+","+y+",0)",value="#{ x } #{ y }",id="cell_"+x+""+y,type="number",min="1",max="9")= ""+x+""+y
+ng-container(*ngIf="fieldService.fieldObservable | async as data")
+    - for (var x = 0; x < 9; x++)
+        - for (var y = 0; y < 9; y++)
+            button(mat-button,(click)="setValue("+ x+","+y+", data.getCell("+x+","+ y+")+1 )",type="number",min="1",max="9") {{ data.getCell(#{ x },#{ y }) }}
