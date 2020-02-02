@@ -21,8 +21,8 @@
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:ssr:github": "npm run build:github-client-and-server-bundles && npm run compile:server",
-    "build:client-and-server-bundles": "npm run build:githubpages && ng run sudokuNg:server:production --bundleDependencies all",
-    "build:github-client-and-server-bundles": "ng build --prod && ng run sudokuNg:server:production --bundleDependencies all"
+    "build:client-and-server-bundles": "ng build --prod && ng run sudokuNg:server:production --bundleDependencies all",
+    "build:github-client-and-server-bundles": "npm run build:githubpages && ng run sudokuNg:server:production --bundleDependencies all"
   },
   "publishConfig": {
     "access": "public"
