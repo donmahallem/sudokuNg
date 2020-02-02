@@ -19,6 +19,7 @@ import 'zone.js/dist/zone-node';
 
 import * as express from 'express';
 import { join } from 'path';
+import { readFileSync, existsSync } from "fs";
 
 // Express server
 const app = express();
@@ -43,9 +44,16 @@ app.set('views', DIST_FOLDER);
 // Example Express Rest API endpoints
 // app.get('/api/**', (req, res) => { });
 // Serve static files from /browser
-app.get('sudokuNg/*.*', express.static(DIST_FOLDER, {
-  maxAge: '1y'
-}));
+
+
+app.get('/sudokuNg/*.*', (req, res, next) => {
+  const shortPath = req.originalUrl.replace("/sudokuNg", "/");
+  if (join(DIST_FOLDER, shortPath)) {
+    res.sendFile(join(DIST_FOLDER, shortPath));
+  } else {
+    next();
+  }
+});
 
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
