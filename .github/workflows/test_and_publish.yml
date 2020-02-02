@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Publish
     needs: test_suite
-    if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev') && github.event_name == 'push'
+    if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/prebuild') && github.event_name == 'push'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -45,6 +45,7 @@ jobs:
         run: |
           npm run build:githubpages
           cp ./dist/browser/index.html ./dist/browser/404.html
+          ./.github/workflows/build_ssr.sh
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
