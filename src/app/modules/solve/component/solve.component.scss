@@ -5,9 +5,15 @@ $layout-break: 930px;
         width:80vw;
         min-width: $layout-break;
         margin:0 auto;
+        height:80vw;
+        min-height: $layout-break;
     }
     @media(max-width: ( $layout-break - 1 )){
         width:100vw;
+        height:100vw;
     }
-
+    app-sudoku-field{
+        height:100%;
+        width:100%;
+    }
 }

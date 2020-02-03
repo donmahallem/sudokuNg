@@ -2,11 +2,26 @@ import { SudokuError } from './sudoku-error';
 
 export type ValidCoordinate = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | number;
 export type ValidValue = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | number;
+type FieldInternalRow = [number, number, number, number, number, number, number, number, number];
+type FieldInternal = [FieldInternalRow, FieldInternalRow, FieldInternalRow, FieldInternalRow,
+    FieldInternalRow, FieldInternalRow, FieldInternalRow, FieldInternalRow, FieldInternalRow];
 export class SudokuField {
-    public constructor() {
-        this.field = new Array(9).fill(0).map(val => new Array(9).fill(0));
+    public constructor(source?: FieldInternal) {
+        if (source) {
+            this.field = source;
+        } else {
+            this.field = [[0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0]]
+        }
     }
-    private readonly field: number[][];
+    private readonly field: FieldInternal;
     public static assertCoordinate(x: ValidCoordinate, y: ValidCoordinate): void {
         if (x < 0 || x > 8 || y < 0 || y > 8) {
             throw new SudokuError('Invalid field: (' + x + ',' + y + ')');
@@ -29,5 +44,10 @@ export class SudokuField {
         SudokuField.assertValue(value);
         this.field[x][y] = value;
         return this;
+    }
+    /** Does create an immutable copy */
+    public clone(): SudokuField {
+        return new SudokuField();
+
     }
 }
