@@ -1,5 +1,4 @@
-import { Component, ViewChild, ViewChildren } from '@angular/core';
-import { SudokuComponent } from '../../play/component';
+import { Component, ViewChild } from '@angular/core';
 import { SudokuFieldComponent } from '../../sudoku-field';
 
 @Component({

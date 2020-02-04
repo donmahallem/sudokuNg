@@ -44,13 +44,6 @@ export class SudokuValidator {
 
     public static checkLines(field: FieldInternal): SudokuValidatorError[] {
         const errors: SudokuValidatorError[] = [];
-        const mm = (m: NumberMap) => {
-            return Array.from(m.values())
-                .filter((val: ValuePosition[]) => {
-                    return val.length > 1;
-                })
-
-        };
         field.map((val: FieldInternalRow, colIdx: number) => {
             return val.reduce((prev: NumberMap, cur: number, rowIdx: number): NumberMap => {
                 if (!prev.has(cur)) {

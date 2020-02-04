@@ -6,7 +6,6 @@ import {
 import { SudokuFieldComponent } from './component';
 import { RouterModule } from '@angular/router';
 import { NumberDialogComponent } from './component/number-dialog.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
     declarations: [
         SudokuFieldComponent,

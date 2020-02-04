@@ -1,4 +1,4 @@
-import { Component, HostBinding, ElementRef, AfterViewInit, HostListener, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { NumberDialogComponent } from './number-dialog.component';
 import { SudokuField } from 'src/app/util';
