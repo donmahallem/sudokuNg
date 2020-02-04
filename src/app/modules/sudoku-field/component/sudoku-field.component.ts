@@ -1,5 +1,4 @@
 import { Component, HostBinding, ElementRef, AfterViewInit, HostListener, EventEmitter, Output } from '@angular/core';
-import { SudokuFieldService } from './sudoku-field.service';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { NumberDialogComponent } from './number-dialog.component';
 import { SudokuField } from 'src/app/util';
