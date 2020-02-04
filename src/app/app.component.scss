@@ -6,12 +6,9 @@ $sudoku_max_size: 800px;
     width:100%;
     flex-direction: column;
     overflow: hidden;
-    min-height:calc($sudoku_max_size/2);
-    min-width:calc($sudoku_max_size/2);
 }
 div.content{
     display:flex;
-    background:red;
     flex:1;
     height:100%;
     overflow: hidden;

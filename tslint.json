@@ -64,6 +64,7 @@
     "no-output-on-prefix": true,
     "no-inputs-metadata-property": true,
     "no-outputs-metadata-property": true,
+    "no-unused-variable": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,
     "no-output-rename": true,
