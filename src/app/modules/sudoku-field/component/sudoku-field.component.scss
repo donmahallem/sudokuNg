@@ -3,30 +3,33 @@ $sudoku_min_size: 640px;
 $sudoku_max_size: 930px;
 $layout-break: 930px;
 
-:host{
-    --field-size: 10%;
-    display:grid;
+:host {
+    display: grid;
+
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-rows: 1fr;
-    border:1px solid black;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    //grid-auto-rows: 1fr;
+    border: 1px solid black;
     position: relative;
-    button{
-        margin:0px;
-        padding:0px;
-        flex:1;
-        grid-auto-rows: 1fr; 
-        width:var(--field-size); 
-        height:var(--field-size);  
+    button {
         min-width: 1px;
+        font-weight: bold;
+        line-height: 80%;
+        font-size: 5vmin;
+        padding: 0px;
+        /*
+        span.mat-button-wrapper {
+            height: 100%;
+            width: 100%;
+        }*/
     }
-    button:nth-of-type(2n){
-        background-color: rgba(0,0,0,0.1);
+    button:nth-of-type(2n) {
+        background-color: rgba(0, 0, 0, 0.1);
     }
 
-    svg{
+    svg {
         position: absolute;
         width: 100%;
-        height:100%;
+        height: 100%;
     }
-    
 }
