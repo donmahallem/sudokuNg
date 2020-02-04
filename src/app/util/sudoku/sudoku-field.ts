@@ -2,8 +2,8 @@ import { SudokuError } from './sudoku-error';
 
 export type ValidCoordinate = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | number;
 export type ValidValue = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | number;
-type FieldInternalRow = [number, number, number, number, number, number, number, number, number];
-type FieldInternal = [FieldInternalRow, FieldInternalRow, FieldInternalRow, FieldInternalRow,
+export type FieldInternalRow = [number, number, number, number, number, number, number, number, number];
+export type FieldInternal = [FieldInternalRow, FieldInternalRow, FieldInternalRow, FieldInternalRow,
     FieldInternalRow, FieldInternalRow, FieldInternalRow, FieldInternalRow, FieldInternalRow];
 export class SudokuField {
     public constructor(source?: FieldInternal) {
@@ -33,6 +33,13 @@ export class SudokuField {
         }
         if (Math.floor(value) !== value) {
             throw new SudokuError('Use only non fractional numbers: ' + value);
+        }
+    }
+    public clear(): void {
+        for (let x = 0; x < 9; x++) {
+            for (let y = 0; y < 9; y++) {
+                this.field[x][y] = 0;
+            }
         }
     }
     public getCell(x: ValidCoordinate, y: ValidCoordinate): ValidValue {

@@ -10,14 +10,15 @@ import { SudokuField } from 'src/app/util';
     styleUrls: ['./sudoku-field.component.scss'],
 })
 export class SudokuFieldComponent {
+    @Output()
+    public readonly field: EventEmitter<SudokuField>;
+    private readonly mField: SudokuField;
+
     constructor(public dialog: MatDialog,
         public elementRef: ElementRef) {
         this.mField = new SudokuField();
         this.field = new EventEmitter(false);
     }
-    @Output()
-    public readonly field: EventEmitter<SudokuField>;
-    private readonly mField: SudokuField;
     public onClickCell(x: number, y: number): void {
         const dialogRef: MatDialogRef<NumberDialogComponent> = this.dialog.open(NumberDialogComponent, {
             width: 'min(90vw,90vh)',
@@ -36,5 +37,10 @@ export class SudokuFieldComponent {
 
     public getValue(x: number, y: number): string {
         return this.mField.getCell(x, y) > 0 ? '' + this.mField.getCell(x, y) : ' ';
+    }
+
+    public clearField(): void {
+        this.mField.clear();
+        this.field.emit(this.mField);
     }
 }
