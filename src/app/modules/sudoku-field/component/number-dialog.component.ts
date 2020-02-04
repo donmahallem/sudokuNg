@@ -10,7 +10,4 @@ export class NumberDialogComponent {
 
     constructor(public dialogRef: MatDialogRef<NumberDialogComponent>) { }
 
-    closeDialog() {
-        this.dialogRef.close('Pizza!');
-    }
 }
