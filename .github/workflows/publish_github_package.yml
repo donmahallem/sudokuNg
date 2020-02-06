@@ -1,0 +1,27 @@
+name: Publish to Github Package Registry
+on:
+  push: 
+    branches:
+      - githubpackage
+
+jobs:
+  publish_github_package:
+    runs-on: ubuntu-latest
+    name: Publish Package to Github Package Registry
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1 
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Install Packages
+        run: |
+          npm ci
+      - name: Build Package
+        run: npm run build
+      - name: Upload Package
+        run: |
+          ./.github/workflows/deploy_github_package.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
