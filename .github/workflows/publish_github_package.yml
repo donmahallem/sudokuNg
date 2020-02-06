@@ -1,6 +1,8 @@
 name: Publish to Github Package Registry
 on:
-  push: [githubpackage]
+  push: 
+    branches:
+      - githubpackage
 
 jobs:
   publish_github_package:
