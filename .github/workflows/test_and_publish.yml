@@ -18,10 +18,20 @@ jobs:
         run: npm run build
       - name: Run Test
         run: npm run test:ci
+      - uses: actions/upload-artifact@v1
+        with:
+          name: coverage-data
+          path: ./coverage/sudokuNg
       - name: Run Lint
         run: npm run lint
       - name: Run Docs
         run: npm run compodoc
+      - name: Coveralls Coverage Upload
+        uses: coverallsapp/github-action@master
+        if: success()
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./coverage/sudokuNg/lcov.info
   publish_suite:
     runs-on: ubuntu-latest
     name: Publish
