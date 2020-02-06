@@ -27,6 +27,7 @@ jobs:
         if: success()
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./coverage/lcov.info
   publish_suite:
     runs-on: ubuntu-latest
     name: Publish
