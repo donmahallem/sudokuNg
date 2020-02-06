@@ -22,6 +22,11 @@ jobs:
         run: npm run lint
       - name: Run Docs
         run: npm run compodoc
+      - name: Coveralls Coverage Upload
+        uses: coverallsapp/github-action@master
+        if: success()
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
   publish_suite:
     runs-on: ubuntu-latest
     name: Publish
