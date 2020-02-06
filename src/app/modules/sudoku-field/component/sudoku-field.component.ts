@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, Output } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { NumberDialogComponent } from './number-dialog.component';
 import { SudokuField } from 'src/app/util';
 
