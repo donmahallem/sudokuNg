@@ -21,7 +21,7 @@ jobs:
       - uses: actions/upload-artifact@v1
         with:
           name: coverage-data
-          path: ./coverage
+          path: ./coverage/sudokuNg
       - name: Run Lint
         run: npm run lint
       - name: Run Docs
@@ -31,7 +31,7 @@ jobs:
         if: success()
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ./coverage/lcov.info
+          path-to-lcov: ./coverage/sudokuNg/lcov.info
   publish_suite:
     runs-on: ubuntu-latest
     name: Publish
