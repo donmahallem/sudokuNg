@@ -9,6 +9,12 @@
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "de": "./src/locale/messages.de.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -56,11 +62,17 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "localize": true
             },
             "githubpages": {
               "baseHref": "/sudokuNg/",
               "deployUrl": "/sudokuNg/"
+            },
+            "de": {
+              "localize": [
+                "de"
+              ]
             }
           }
         },
@@ -126,7 +138,8 @@
                 }
               ],
               "sourceMap": false,
-              "optimization": true
+              "optimization": true,
+              "localize": true
             }
           }
         },
@@ -149,15 +162,18 @@
             "browserTarget": "sudokuNg:build:production",
             "serverTarget": "sudokuNg:server:production",
             "routes": [
-              "/",
-              "/solve",
-              "/play"
-            ]
+              "solve",
+              "play"
+            ],
+            "guessRoutes": true
           },
           "configurations": {
             "production": {},
             "githubpages": {
               "browserTarget": "sudokuNg:build:production,githubpages"
+            },
+            "de": {
+              "browserTarget": "sudokuNg:build:production,githubpages,de"
             }
           }
         }

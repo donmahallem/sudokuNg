@@ -1,4 +1,8 @@
 mat-toolbar(color="primary")
-  span SudokuNg
+  a(routerLink="/")
+    span(i18n="general|the app name@@appName") SudokuNg
+  span.toolbar-spacer
+  a(mat-icon-button,aria-hidden="false",aria-label="Example delete icon",[routerLink]="['settings']")
+    mat-icon settings
 div.content
   router-outlet

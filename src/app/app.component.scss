@@ -6,6 +6,11 @@ $sudoku_max_size: 800px;
     width:100%;
     flex-direction: column;
     overflow: hidden;
+    mat-toolbar {
+        span.toolbar-spacer {
+            flex: 1 1 auto;
+        }
+    }
 }
 div.content{
     display:flex;

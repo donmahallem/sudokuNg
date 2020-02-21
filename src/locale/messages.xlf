@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="appName" datatype="html">
+        <source>SudokuNg</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.pug</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">the app name</note>
+        <note priority="1" from="meaning">general</note>
+      </trans-unit>
+      <trans-unit id="welcomeHeaderMessage" datatype="html">
+        <source>Welcome to sudokuNg</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/home/component/home.component.pug</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Welcome message header</note>
+        <note priority="1" from="meaning">home component</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
