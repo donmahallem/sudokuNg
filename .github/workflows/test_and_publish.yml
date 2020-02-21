@@ -50,7 +50,7 @@ jobs:
         run: npm ci
       - name: Run Build
         run: |
-          npm run prerender
+          npm run prerender:githubpages
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
