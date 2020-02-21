@@ -57,6 +57,10 @@
                   "maximumWarning": "6kb"
                 }
               ]
+            },
+            "githubpages": {
+              "baseHref": "/sudokuNg/",
+              "deployUrl": "/sudokuNg/"
             }
           }
         },
@@ -143,6 +147,21 @@
           "builder": "@nguniversal/builders:prerender",
           "options": {
             "browserTarget": "sudokuNg:build:production",
+            "serverTarget": "sudokuNg:server:production",
+            "routes": [
+              "/",
+              "/solve",
+              "/play"
+            ]
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "prerender-github": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "sudokuNg:build:production,githubpages",
             "serverTarget": "sudokuNg:server:production",
             "routes": [
               "/",

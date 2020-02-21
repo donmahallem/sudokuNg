@@ -26,8 +26,8 @@
     "dev:ssr": "ng run sudokuNg:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build --prod && ng run sudokuNg:server:production",
-    "kk": "ng update @angular/cli @angular/cdk @angular/core @angular/material",
-    "prerender": "ng run sudokuNg:prerender"
+    "prerender": "ng run sudokuNg:prerender",
+    "prerender:githubpages": "ng run sudokuNg:prerender-github"
   },
   "publishConfig": {
     "access": "public"
