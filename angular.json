@@ -172,7 +172,7 @@
             "githubpages": {
               "browserTarget": "sudokuNg:build:production,githubpages"
             },
-            "de": {
+            "githubpages-de": {
               "browserTarget": "sudokuNg:build:production,githubpages,de"
             }
           }
