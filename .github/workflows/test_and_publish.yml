@@ -47,15 +47,10 @@ jobs:
         with:
           node-version: '12.x'
       - name: Install Deps
-        run: npm install --no-save
+        run: npm ci
       - name: Run Build
         run: |
-          npm run build
-      - name: Prepare deployment
-        run: |
-          npm run build:githubpages
-          cp ./dist/browser/index.html ./dist/browser/404.html
-          ./.github/workflows/build_ssr.sh
+          npm run prerender
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
