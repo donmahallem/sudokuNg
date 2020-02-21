@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-sudoku-field',
+    selector: 'app-play',
     templateUrl: './sudoku.component.pug',
     styleUrls: ['./sudoku.component.scss']
 })

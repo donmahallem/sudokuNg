@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -50,8 +51,16 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
+            },
+            "githubpages": {
+              "baseHref": "/sudokuNg/",
+              "deployUrl": "/sudokuNg/"
             }
           }
         },
@@ -105,8 +114,8 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
-            "main": "src/main.server.ts",
-            "tsConfig": "src/tsconfig.server.json"
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
             "production": {
@@ -117,11 +126,51 @@
                 }
               ],
               "sourceMap": false,
-              "optimization": {
-                "scripts": false,
-                "styles": true
-              }
+              "optimization": true
             }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "sudokuNg:build",
+            "serverTarget": "sudokuNg:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sudokuNg:build:production",
+              "serverTarget": "sudokuNg:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "sudokuNg:build:production",
+            "serverTarget": "sudokuNg:server:production",
+            "routes": [
+              "/",
+              "/solve",
+              "/play"
+            ]
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "prerender-github": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "sudokuNg:build:production,githubpages",
+            "serverTarget": "sudokuNg:server:production",
+            "routes": [
+              "/",
+              "/solve",
+              "/play"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }

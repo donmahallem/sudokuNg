@@ -18,10 +18,20 @@ jobs:
         run: npm run build
       - name: Run Test
         run: npm run test:ci
+      - uses: actions/upload-artifact@v1
+        with:
+          name: coverage-data
+          path: ./coverage/sudokuNg
       - name: Run Lint
         run: npm run lint
       - name: Run Docs
         run: npm run compodoc
+      - name: Coveralls Coverage Upload
+        uses: coverallsapp/github-action@master
+        if: success()
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./coverage/sudokuNg/lcov.info
   publish_suite:
     runs-on: ubuntu-latest
     name: Publish
@@ -37,15 +47,10 @@ jobs:
         with:
           node-version: '12.x'
       - name: Install Deps
-        run: npm install --no-save
+        run: npm ci
       - name: Run Build
         run: |
-          npm run build
-      - name: Prepare deployment
-        run: |
-          npm run build:githubpages
-          cp ./dist/browser/index.html ./dist/browser/404.html
-          ./.github/workflows/build_ssr.sh
+          npm run prerender:githubpages
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
