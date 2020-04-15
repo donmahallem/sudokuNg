@@ -66,7 +66,7 @@
     "express": "~4.17.1",
     "material-design-icons": "~3.0.1",
     "ng-cli-pug-loader": "~0.2.0",
-    "rxjs": "~6.5.3",
+    "rxjs": "~6.5.5",
     "tslib": "~1.11.1",
     "zone.js": "~0.10.3"
   },
