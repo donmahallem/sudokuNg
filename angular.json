@@ -155,22 +155,10 @@
             ]
           },
           "configurations": {
-            "production": {}
-          }
-        },
-        "prerender-github": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "browserTarget": "sudokuNg:build:production,githubpages",
-            "serverTarget": "sudokuNg:server:production",
-            "routes": [
-              "/",
-              "/solve",
-              "/play"
-            ]
-          },
-          "configurations": {
-            "production": {}
+            "production": {},
+            "githubpages": {
+              "browserTarget": "sudokuNg:build:production,githubpages"
+            }
           }
         }
       }
