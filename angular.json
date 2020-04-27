@@ -149,9 +149,7 @@
             "browserTarget": "sudokuNg:build:production",
             "serverTarget": "sudokuNg:server:production",
             "routes": [
-              "/",
-              "/solve",
-              "/play"
+              "/"
             ]
           },
           "configurations": {

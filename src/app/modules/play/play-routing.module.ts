@@ -5,7 +5,7 @@ import { SudokuComponent } from './component/sudoku.component';
 const playRoutes: Routes = [
     {
         component: SudokuComponent,
-        path: '**',
+        path: '/',
     },
 ];
 

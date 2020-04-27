@@ -5,7 +5,7 @@ import { SolveComponent } from './component';
 const playRoutes: Routes = [
     {
         component: SolveComponent,
-        path: '**',
+        path: '/',
     },
 ];
 
