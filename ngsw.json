@@ -1,0 +1,96 @@
+{
+  "configVersion": 1,
+  "timestamp": 1588542135864,
+  "index": "/sudokuNg/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/sudokuNg/5-es2015.2a0591bb80496830849e.js",
+        "/sudokuNg/5-es5.2a0591bb80496830849e.js",
+        "/sudokuNg/6-es2015.b1a36c3c579d5396dde2.js",
+        "/sudokuNg/6-es5.b1a36c3c579d5396dde2.js",
+        "/sudokuNg/favicon.ico",
+        "/sudokuNg/index.html",
+        "/sudokuNg/main-es2015.6c00fd19232dee61ddf5.js",
+        "/sudokuNg/main-es5.6c00fd19232dee61ddf5.js",
+        "/sudokuNg/manifest.webmanifest",
+        "/sudokuNg/polyfills-es2015.f2c5ab749249a66bdf26.js",
+        "/sudokuNg/polyfills-es5.61cb426e47d69308abc9.js",
+        "/sudokuNg/runtime-es2015.fdfd51826a7db28b3a41.js",
+        "/sudokuNg/runtime-es5.fdfd51826a7db28b3a41.js",
+        "/sudokuNg/styles.b7d15b27764f6b0445ae.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/sudokuNg/MaterialIcons-Regular.4674f8ded773cb03e824.eot",
+        "/sudokuNg/MaterialIcons-Regular.5e7382c63da0098d634a.ttf",
+        "/sudokuNg/MaterialIcons-Regular.83bebaf37c09c7e1c3ee.woff",
+        "/sudokuNg/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2",
+        "/sudokuNg/assets/icons/icon-128x128.png",
+        "/sudokuNg/assets/icons/icon-144x144.png",
+        "/sudokuNg/assets/icons/icon-152x152.png",
+        "/sudokuNg/assets/icons/icon-192x192.png",
+        "/sudokuNg/assets/icons/icon-384x384.png",
+        "/sudokuNg/assets/icons/icon-512x512.png",
+        "/sudokuNg/assets/icons/icon-72x72.png",
+        "/sudokuNg/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/sudokuNg/5-es2015.2a0591bb80496830849e.js": "aeff4784d18b6e3ac31931966bc27c625060232d",
+    "/sudokuNg/5-es5.2a0591bb80496830849e.js": "c51d6eb7874169e4df9a4eba62d32d3352556d35",
+    "/sudokuNg/6-es2015.b1a36c3c579d5396dde2.js": "695cd85d64a19511e1c51d4178d3326bd4744a7c",
+    "/sudokuNg/6-es5.b1a36c3c579d5396dde2.js": "ec6477715afef46d3ab47e0fc03724bf888db5d1",
+    "/sudokuNg/MaterialIcons-Regular.4674f8ded773cb03e824.eot": "26fb8cecb5512223277b4d290a24492a0f09ede1",
+    "/sudokuNg/MaterialIcons-Regular.5e7382c63da0098d634a.ttf": "fc05de31234e0090f7ddc28ce1b23af4026cb1da",
+    "/sudokuNg/MaterialIcons-Regular.83bebaf37c09c7e1c3ee.woff": "c6c953c2ccb2ca9abb21db8dbf473b5a435f0082",
+    "/sudokuNg/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2": "09963592e8c953cc7e14e3fb0a5b05d5042e8435",
+    "/sudokuNg/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/sudokuNg/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/sudokuNg/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/sudokuNg/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/sudokuNg/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/sudokuNg/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/sudokuNg/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/sudokuNg/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/sudokuNg/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/sudokuNg/index.html": "ac949fa19dd2107fb34c7de4c0afec5d4dbeda3e",
+    "/sudokuNg/main-es2015.6c00fd19232dee61ddf5.js": "5225d904166fbd715ea992b8ea87ad8ca6684c44",
+    "/sudokuNg/main-es5.6c00fd19232dee61ddf5.js": "75b620e589fe2689b6923b5c24dd90c4e5b200e9",
+    "/sudokuNg/manifest.webmanifest": "3eee2cd022b132b7b7f3dd4c6d093c431ca765e4",
+    "/sudokuNg/polyfills-es2015.f2c5ab749249a66bdf26.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
+    "/sudokuNg/polyfills-es5.61cb426e47d69308abc9.js": "a82464f9098e1824a64d19d2e626a354272f4ea1",
+    "/sudokuNg/runtime-es2015.fdfd51826a7db28b3a41.js": "4081814689126530df5a361147bda5b0d39aec4f",
+    "/sudokuNg/runtime-es5.fdfd51826a7db28b3a41.js": "2d9dfe20c81dc75962b775bb2ec29eedb2b8b617",
+    "/sudokuNg/styles.b7d15b27764f6b0445ae.css": "2f0b0a1b49ab2c6c70c0d27c1c561b1ca2d52383"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
