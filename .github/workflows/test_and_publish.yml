@@ -61,7 +61,7 @@ jobs:
         run: npm ci
       - name: Run Build
         run: |
-          npm run prerender:githubpages
+          npx ng build --prod --configuration=production,githubpages
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
