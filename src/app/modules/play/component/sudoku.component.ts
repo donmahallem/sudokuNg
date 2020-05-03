@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-play',
-    templateUrl: './sudoku.component.pug',
+    templateUrl: './sudoku.component.html',
     styleUrls: ['./sudoku.component.scss']
 })
 export class SudokuComponent {

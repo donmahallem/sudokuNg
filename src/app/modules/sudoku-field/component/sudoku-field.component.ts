@@ -5,7 +5,7 @@ import { SudokuField } from 'src/app/util';
 
 @Component({
     selector: 'app-sudoku-field',
-    templateUrl: './sudoku-field.component.pug',
+    templateUrl: './sudoku-field.component.html',
     styleUrls: ['./sudoku-field.component.scss'],
 })
 export class SudokuFieldComponent {
