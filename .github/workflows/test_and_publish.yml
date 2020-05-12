@@ -61,10 +61,11 @@ jobs:
         run: npm ci
       - name: Run Build
         run: |
-          npm run prerender:githubpages
+          npx ng build --prod --configuration=production,githubpages
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: dist/browser # The folder the action should deploy.
+          CLEAN: true

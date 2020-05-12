@@ -3,7 +3,7 @@ import { SudokuFieldComponent } from '../../sudoku-field';
 
 @Component({
     selector: 'app-solve',
-    templateUrl: './solve.component.pug',
+    templateUrl: './solve.component.html',
     styleUrls: ['./solve.component.scss']
 })
 export class SolveComponent {

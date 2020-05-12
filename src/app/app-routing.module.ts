@@ -27,8 +27,8 @@ const appRoutes: Routes = [
     ],
     imports: [
         RouterModule.forRoot(appRoutes, {
-    initialNavigation: 'enabled'
-}),
+            initialNavigation: 'enabled'
+        }),
     ],
 })
 export class AppRoutingModule { }
